@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script defer src="js/javascript.js"></script>
+    <title>Jogo Da Cobrinha</title>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="navbar">
+            <h1 class="titulo">Snake Game</h1>
+        </div>
+        <div class="row">
+            <div class="cow1">
+                <input type="text" class="nomeJogador" id="nomeJogador" placeholder="Nome do Jogador">
+                <select name="dificuldade" id="dificuldade" class="selecionenivel">
+                    <option selected value="300">Facil</option>
+                    <option value="200">Medio</option>
+                    <option value="100">dificil</option>
+                </select>
+
+                <button type="button" class="iniciarjogo" onclick="inicionivel()">
+                    iniciarJogo
+                </button>
+            </div>
+            <div class="cow2">
+
+                <canvas id="cobra" width="512" height="512"></canvas>
+            
+            </div>
+            <div class="cow3">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

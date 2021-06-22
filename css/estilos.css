@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: limegreen;
+    color: green;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    color: green;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+}
+
+.cow1{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cow2{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.cow3{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.nomeJogador{
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4%;
+    margin-top: 15%;
+    background-color: lightgreen;
+    border-radius: 10%;
+    color: darkgreen;
+    text-align: center;
+}
+
+.iniciarjogo{
+    width: 70%;
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+.selecionenivel{
+    margin-bottom: 4%;
+    width: 70%;
+    background-color: lightgreen;
+    color: darkgreen;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
