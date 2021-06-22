@@ -7,7 +7,6 @@ let food = {
     x: Math.floor(Math.random() * 15 + 1) * box,
     y: Math.floor(Math.random() * 15 + 1) * box
 }
-let nomeJogador ='';
 let pontuacao = 0;
 
 cobra[0] ={
@@ -46,7 +45,8 @@ function iniciarJogo(){
     for(i=1; i < cobra.length;i++){
         if(cobra[0].x == cobra[i].x && cobra[0].y == cobra[i].y){
             clearInterval(jogo);
-            alert('Game Over');
+            alert('GAME OVER '+nomeJogador.value+' Sua Pontuação foi: '+pontuacao);
+            window.location.href=window.location.href;
         }
     }
 
@@ -72,7 +72,7 @@ function iniciarJogo(){
     }else{
         food.x = Math.floor(Math.random() * 15 + 1) * box;
         food.y = Math.floor(Math.random() * 15 + 1) * box;
-        
+        mostrapontuacao();
     }
 
     
@@ -85,11 +85,24 @@ function iniciarJogo(){
 
 function inicionivel(){
     nivel = document.getElementById('dificuldade')
-    console.log(nivel.value)
+    nomeJogador = document.getElementById('nomeJogador') 
     jogo = setInterval(iniciarJogo,nivel.value);
 
 }
 
 function mostrapontuacao(){
+    if(nivel.value==300){
+        bonus = 1;
+    }else if(nivel.value==200){
+        bonus = 2;
+    }else if(nivel.value==100){
+        bonus = 3;
+    }else{
+        bonus = 0;
+    }
 
+    pontuacao = pontuacao + 1 * bonus;
+    placar = document.getElementById('placar').innerText = pontuacao;
+
+    
 }
